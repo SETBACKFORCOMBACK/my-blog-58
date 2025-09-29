@@ -36,9 +36,14 @@ All colors MUST be HSL.
     --input: 0 0% 90%;
     --ring: 0 0% 8%;
 
-    /* Blog-specific design tokens */
+    /* Portfolio-specific design tokens */
     --content-width: 1200px;
     --header-height: 80px;
+    
+    /* Blue accent colors for professional portfolio */
+    --portfolio-blue: 217 91% 60%;
+    --portfolio-blue-light: 217 91% 70%;
+    --portfolio-blue-dark: 217 91% 50%;
     
     /* Typography scale */
     --text-xs: 0.75rem;
@@ -131,8 +136,8 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  .container-blog {
-    @apply mx-auto px-6 max-w-7xl;
+  .container-portfolio {
+    @apply mx-auto px-6 max-w-6xl;
   }
   
   .nav-link {
@@ -165,6 +170,31 @@ All colors MUST be HSL.
   
   .section-title {
     @apply text-2xl font-bold text-foreground mb-8;
+  }
+  
+  /* Portfolio-specific styles */
+  .hero-title {
+    @apply text-5xl md:text-6xl font-bold text-foreground leading-tight;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl text-muted-foreground leading-relaxed;
+  }
+  
+  .portfolio-card {
+    @apply bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border;
+  }
+  
+  .skill-tag {
+    @apply bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .portfolio-btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+  
+  .portfolio-btn-secondary {
+    @apply border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 py-3 rounded-lg font-medium transition-colors duration-200;
   }
 
   /* Skip to content and focus styles for accessibility */

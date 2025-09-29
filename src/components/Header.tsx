@@ -9,10 +9,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: 'ALL POST', href: '/posts' },
-    { name: 'BUSINESS', href: '/business' },
-    { name: 'TECHNOLOGY', href: '/technology' },
-    { name: 'PODCAST', href: '/podcast' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'SKILLS', href: '#skills' },
+    { name: 'PROJECTS', href: '#projects' },
+    { name: 'CERTIFICATES', href: '#certificates' },
+    { name: 'CONTACT', href: '#contact' },
   ];
 
   const socialLinks = [
@@ -23,25 +24,29 @@ const Header = () => {
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="container-blog">
+      <div className="container-portfolio">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="block">
-              <h1 className="text-2xl font-bold text-foreground">nexus</h1>
-            </Link>
+            <a href="#hero" className="block">
+              <h1 className="text-2xl font-bold text-foreground">Imran Sheik</h1>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.href}
+                href={item.href}
                 className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -58,10 +63,10 @@ const Header = () => {
             <Button 
               variant="outline" 
               size="sm" 
-              aria-label="Search articles"
-              onClick={() => navigate('/search')}
+              aria-label="Download Resume"
+              onClick={() => alert('Resume download will be available soon!')}
             >
-              <Search className="h-4 w-4" />
+              Resume
             </Button>
             <ThemeToggle />
           </div>
@@ -82,14 +87,18 @@ const Header = () => {
           <div className="lg:hidden border-t border-border py-4">
             <nav className="flex flex-col space-y-4" role="navigation" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className="nav-link"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </nav>
             
@@ -109,10 +118,10 @@ const Header = () => {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  aria-label="Search articles"
-                  onClick={() => navigate('/search')}
+                  aria-label="Download Resume"
+                  onClick={() => alert('Resume download will be available soon!')}
                 >
-                  <Search className="h-4 w-4" />
+                  Resume
                 </Button>
             </div>
           </div>
