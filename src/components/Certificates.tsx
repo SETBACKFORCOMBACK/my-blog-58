@@ -25,7 +25,7 @@ const Certificates = () => {
       description: "Comprehensive course covering responsive web design principles, mobile-first approach, and modern CSS techniques.",
       skills: ["Responsive Design", "CSS", "HTML", "Mobile-First"],
       badgeColor: "bg-blue-500",
-      link: "https://lnkd.in/dWfaghJ7"
+      link: "https://certificates.ccbp.in/academy/build-your-own-responsive-website?id=WVOBGQBZYF"
     },
     {
       title: "Build Your Own Static Website",
@@ -41,7 +41,7 @@ const Certificates = () => {
       description: "Database fundamentals, SQL queries, data modeling, and database management concepts for web applications.",
       skills: ["SQL", "Database Design", "Data Modeling", "RDBMS"],
       badgeColor: "bg-purple-500",
-      link: "https://lnkd.in/dWfaghJ7"
+      link: "https://certificates.ccbp.in/academy/introduction-to-databases?id=EJKDZPLXOC"
     }
   ];
 
