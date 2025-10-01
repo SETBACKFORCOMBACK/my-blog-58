@@ -33,7 +33,7 @@ const Certificates = () => {
       description: "Fundamentals of web development including HTML structure, CSS styling, and creating static websites from scratch.",
       skills: ["HTML", "CSS", "Web Development", "Static Sites"],
       badgeColor: "bg-green-500",
-      link: "https://lnkd.in/dWfaghJ7"
+      link: "https://certificates.ccbp.in/academy/static-website?id=ZKQWBITOQB"
     },
     {
       title: "Introduction to Databases",
