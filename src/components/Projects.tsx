@@ -4,36 +4,28 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
-      title: "AI Community Platform",
-      description: "A web platform for AI enthusiasts to share knowledge, collaborate on projects, and build connections. Built with modern web technologies and focused on user experience.",
-      technologies: ["React", "Node.js", "MongoDB", "Python"],
-      githubUrl: "#",
-      liveUrl: "#",
-      status: "In Development"
-    },
-    {
-      title: "Python Automation Tools",
-      description: "Collection of Python scripts and tools for automating everyday tasks, data processing, and system administration. Includes web scraping and API integration.",
-      technologies: ["Python", "Selenium", "APIs", "Data Analysis"],
-      githubUrl: "#",
+      title: "Adin Fabrication Calculator",
+      description: "Professional web application for fabrication cost calculations. Built for Adin company to streamline their fabrication estimation process with an intuitive interface.",
+      technologies: ["Web Development", "JavaScript", "Calculator Logic", "UI/UX"],
+      githubUrl: "https://github.com/SETBACKFORCOMBACK/adinn.git",
       liveUrl: "#",
       status: "Completed"
     },
     {
-      title: "Responsive Portfolio Website",
-      description: "Modern, responsive portfolio website showcasing web development skills. Features smooth animations, clean design, and optimal performance.",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-      githubUrl: "#",
+      title: "Symptom Buddy",
+      description: "Healthcare web application for patient symptom detection and analysis. Helps users identify potential health issues based on their symptoms with an easy-to-use interface.",
+      technologies: ["React", "Healthcare Tech", "Lovable", "Symptom Analysis"],
+      githubUrl: "https://github.com/SETBACKFORCOMBACK/lovable-symptom-buddy.git",
       liveUrl: "#",
       status: "Completed"
     },
     {
-      title: "Database Management System",
-      description: "Custom database solution for small businesses with user-friendly interface, data visualization, and reporting features. Focus on efficiency and scalability.",
-      technologies: ["SQL", "Database Design", "Data Modeling"],
-      githubUrl: "#",
+      title: "7-Day Python Challenge Series",
+      description: "Complete series of Python projects: Calculator, Number Guessing Game, To-Do List, Notes Saver, Bank Account Simulator (OOP), Student Grade Manager, and AI Chatbot with Gemini API.",
+      technologies: ["Python", "OOP", "AI Integration", "Gemini API"],
+      githubUrl: "https://github.com/SETBACKFORCOMBACK",
       liveUrl: "#",
-      status: "Planned"
+      status: "Completed"
     }
   ];
 
@@ -79,18 +71,24 @@ const Projects = () => {
                     variant="outline" 
                     size="sm"
                     className="flex items-center gap-2"
+                    asChild
                   >
-                    <Github className="w-4 h-4" />
-                    Code
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
                   </Button>
-                  {project.status === 'Completed' && (
+                  {project.status === 'Completed' && project.liveUrl !== '#' && (
                     <Button 
                       variant="outline" 
                       size="sm"
                       className="flex items-center gap-2"
+                      asChild
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
                     </Button>
                   )}
                 </div>
