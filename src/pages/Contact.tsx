@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MessageSquare, Send, MapPin } from 'lucide-react';
+import { Mail, MessageSquare, Send, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -149,6 +149,19 @@ const Contact = () => {
                       <p className="text-muted-foreground">hello@nexusblog.com</p>
                       <p className="text-sm text-muted-foreground">
                         We typically respond within 24 hours
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground">Phone</h3>
+                      <p className="text-muted-foreground">+91 7010532395</p>
+                      <p className="text-sm text-muted-foreground">
+                        Available during business hours
                       </p>
                     </div>
                   </div>
