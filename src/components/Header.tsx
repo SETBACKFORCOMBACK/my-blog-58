@@ -64,9 +64,11 @@ const Header = () => {
               variant="outline" 
               size="sm" 
               aria-label="Download Resume"
-              onClick={() => alert('Resume download will be available soon!')}
+              asChild
             >
-              Resume
+              <a href="/Imran_Sheik_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </Button>
             <ThemeToggle />
           </div>
@@ -119,9 +121,11 @@ const Header = () => {
                   variant="outline" 
                   size="sm" 
                   aria-label="Download Resume"
-                  onClick={() => alert('Resume download will be available soon!')}
+                  asChild
                 >
-                  Resume
+                  <a href="/Imran_Sheik_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    Resume
+                  </a>
                 </Button>
             </div>
           </div>
