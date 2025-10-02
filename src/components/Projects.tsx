@@ -16,7 +16,15 @@ const Projects = () => {
       description: "Healthcare web application for patient symptom detection and analysis. Helps users identify potential health issues based on their symptoms with an easy-to-use interface.",
       technologies: ["React", "Healthcare Tech", "Lovable", "Symptom Analysis"],
       githubUrl: "https://github.com/SETBACKFORCOMBACK/lovable-symptom-buddy.git",
-      liveUrl: "#",
+      liveUrl: "https://lovable-symptom-buddy.lovable.app",
+      status: "Completed"
+    },
+    {
+      title: "Symptom Sync Patient",
+      description: "Professional healthcare platform with landing page, comprehensive symptom form, real-time patient dashboard, secure chat interface, and mobile-first design. Features a complete healthcare design system for seamless patient-doctor communication.",
+      technologies: ["React", "Healthcare Tech", "Real-time Dashboard", "Mobile-First", "Secure Messaging"],
+      githubUrl: "https://github.com/SETBACKFORCOMBACK/symptom-sync-patient.git",
+      liveUrl: "https://symptom-sync-patient.lovable.app",
       status: "Completed"
     },
     {
