@@ -46,6 +46,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="portfolio-card hover:scale-[1.02] group">
               <div className="mb-4">
+                {index === 0 && (
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full animate-pulse">
+                      ✨ Client Project Work
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-semibold text-foreground">
                     {project.title}
