@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Send } from 'lucide-react';
+import { Mail, Linkedin, Send, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
@@ -69,6 +69,19 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-foreground">LinkedIn</h4>
                     <p className="text-muted-foreground">linkedin.com/in/imran-sheik</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="tel:+917010532395"
+                  className="flex items-center gap-4 p-4 bg-card rounded-lg hover:shadow-md transition-all duration-300 group"
+                >
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Phone</h4>
+                    <p className="text-muted-foreground">+91 7010532395</p>
                   </div>
                 </a>
               </div>
